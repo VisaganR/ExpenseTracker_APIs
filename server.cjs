@@ -15,7 +15,7 @@ connecToDb(function(error){
     console.log(error)
    }
 else{      //if no error in establishing  connection
-    const port=8000
+    const port= process.env.PORT || 8000
 app.listen(port)
 db=getDb()
 console.log(`Listening on port ${port}...`)
